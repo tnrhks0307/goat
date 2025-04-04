@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤 문구</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <p id="message">🔮 마법의 NFC가 말하길... 🔮</p>
+    <button onclick="showRandomMessage()">눌러서 확인하기</button>
+
+    <script>
+        function showRandomMessage() {
+            const messages = [
+                "진리를 알지니 진리가 너희를 자유케 하리라.",
+                "내게 능력 주시는 분으로 말미암아 내게는 모든 일을 할 힘이 있습니다",
+                "두려워 말라. 내가 너를 구원해 주었고 너의 이름을 불렀으니 너는 내 사람이로다.",
+                "교만은 패망의 선봉이요 거만한 마음은 넘어짐의 앞잡이니라",
+                "박해를 받아도 버린 바 되지 아니하며 거꾸러뜨림을 당하여도 망하지 아니하고."
+            ];
+            document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+        }
+    </script>
+</body>
+</html>
